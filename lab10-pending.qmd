@@ -1,0 +1,25 @@
+---
+title: "lab10"
+format: pdf
+author: "Ashley Osuna ; asosuna@ucsd.edu"
+editor: visual
+---
+
+Q1: What percentage of structures in the PDB are solved by X-Ray and Electron Microscopy.
+
+```{r}
+pdb_stats<-read.csv("pdb_stats.csv",row.names=1)
+pdb_stats[]<-lapply(pdb_stats,function(x)as.numeric(gsub(",","",x)))
+```
+
+
+Q2: What proportion of structures in the PDB are protein?
+
+```{r}
+protein_total<-pdb_stats["Protein(only)","Total"]
+protein_total
+```
+
+
+Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB?
+
